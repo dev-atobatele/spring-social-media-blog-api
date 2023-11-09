@@ -5,6 +5,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.repository.AccountRepository;
+import com.example.repository.MessageRepository;
 import com.example.service.AccountService;
 import com.example.service.MessageService;
 
@@ -22,13 +24,29 @@ public class SocialMediaController {
     @Autowired
     private MessageService messageService;
 
+    @Autowired
+    private AccountRepository accountRepository;
+    @Autowired
+    private MessageRepository messageRepository;
+
     @Bean
-    public AccountService aService(){
+    public AccountService accountService(){
         return new AccountService();
     }
     @Bean
-    public MessageService mService(){
+    public MessageService messageService(){
         return new MessageService();
+    }
+
+    @Bean
+    public AccountRepository accountRepository(){
+        return new AccountRepository() {
+        };
+    }
+
+    @Bean public MessageRepository messageRepository(){
+        return new MessageRepository() {
+        };
     }
 
     @Autowired
