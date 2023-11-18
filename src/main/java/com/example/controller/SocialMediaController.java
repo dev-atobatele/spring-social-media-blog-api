@@ -1,13 +1,15 @@
 package com.example.controller;
 
+ import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.repository.AccountRepository;
-import com.example.repository.MessageRepository;
-import com.example.service.AccountService;
+import com.example.entity.Message;
+
 import com.example.service.MessageService;
 
 /**
@@ -18,44 +20,17 @@ import com.example.service.MessageService;
  */
 @RestController
 public class SocialMediaController {
-
-    @Autowired
-    private AccountService accountService;
     @Autowired
     private MessageService messageService;
-
-    @Autowired
-    private AccountRepository accountRepository;
-    @Autowired
-    private MessageRepository messageRepository;
-
-    @Bean
-    public AccountService accountService(){
-        return new AccountService();
+    public SocialMediaController(MessageService messageService){
+        this.messageService = messageService;
+    }    
+    @GetMapping("/messages/{message_id}")
+    public Message getMessageId(@PathVariable Integer message_id)throws Exception{
+        return messageService.getMessageById(message_id);
     }
-    @Bean
-    public MessageService messageService(){
-        return new MessageService();
-    }
-
-    @Bean
-    public AccountRepository accountRepository(){
-        return new AccountRepository() {
-        };
-    }
-
-    @Bean public MessageRepository messageRepository(){
-        return new MessageRepository() {
-        };
-    }
-
-    @Autowired
-    ApplicationContext applicationContext;
-
-    public AccountService getAccountService(){
-        return applicationContext.getBean(AccountService.class);
-    }
-    public MessageService getMessageService(){
-        return applicationContext.getBean(MessageService.class);
+    @GetMapping("/messages")
+    public List<Message> getAllMessages(){
+        return messageService.getAllMessages();
     }
 }
