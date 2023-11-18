@@ -47,4 +47,19 @@ public class MessageService {
         }
         return postedByUser;
     }
+
+    public Object updateMessageById(Integer message_id, String message_text){
+        Optional<Message> opMessage = messageRepository.findById(message_id);
+        if(opMessage.isPresent()){
+            opMessage.get().setMessage_text(message_text);
+            messageRepository.save(opMessage.get());
+            return 1;
+        }
+        return null;
+    }
+
+    public Object createMessage(Message message){
+        messageRepository.save(message);
+        return 1;
+    }
 }

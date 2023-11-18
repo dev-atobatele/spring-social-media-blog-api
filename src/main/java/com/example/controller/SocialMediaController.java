@@ -5,8 +5,9 @@ package com.example.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.entity.Message;
@@ -41,5 +42,9 @@ public class SocialMediaController {
     @GetMapping("/accounts/{account_id}/messages")
     public List<Message> getAllMessagesFromUser(@PathVariable Integer account_id){
         return messageService.getAllMessagesFromUser(account_id);
+    }
+    @PatchMapping("/messages/{message_id}")
+    public Object updateMessage(@PathVariable Integer message_id, String message_text){
+        return messageService.updateMessageById(message_id, message_text);
     }
 }
