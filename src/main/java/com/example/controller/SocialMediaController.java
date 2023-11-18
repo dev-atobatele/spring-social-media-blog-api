@@ -3,6 +3,7 @@ package com.example.controller;
  import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -26,11 +27,19 @@ public class SocialMediaController {
         this.messageService = messageService;
     }    
     @GetMapping("/messages/{message_id}")
-    public Message getMessageId(@PathVariable Integer message_id)throws Exception{
+    public Message getMessageById(@PathVariable Integer message_id){
         return messageService.getMessageById(message_id);
     }
     @GetMapping("/messages")
     public List<Message> getAllMessages(){
         return messageService.getAllMessages();
+    }
+    @DeleteMapping("/messages/{message_id}")
+    public Object deleteMessageById(@PathVariable Integer message_id){
+        return messageService.deleteMessageById(message_id);
+    }
+    @GetMapping("/accounts/{account_id}/messages")
+    public List<Message> getAllMessagesFromUser(@PathVariable Integer account_id){
+        return messageService.getAllMessagesFromUser(account_id);
     }
 }

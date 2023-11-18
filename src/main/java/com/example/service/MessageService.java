@@ -1,5 +1,6 @@
 package com.example.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,8 +27,24 @@ public class MessageService {
         if(optionalMessage.isPresent()){
             return optionalMessage.get();
         }
-        else {
-            return null;
+        return null;
+    }
+
+    public Object deleteMessageById(Integer id){
+        if(messageRepository.findById(id).isPresent()){
+            messageRepository.deleteById(id);
+            return 1;
         }
+        return null;
+    }
+
+    public List<Message> getAllMessagesFromUser(Integer account_id){
+        List<Message> postedByUser = new ArrayList<>();
+        for (Message message : getAllMessages()) {
+            if(message.getPosted_by().equals(account_id)){
+                postedByUser.add(message);
+            }
+        }
+        return postedByUser;
     }
 }
