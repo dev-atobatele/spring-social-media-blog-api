@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.example.entity.Message;
@@ -48,18 +50,11 @@ public class MessageService {
         return postedByUser;
     }
 
-    public Object updateMessageById(Integer message_id, String message_text){
-        Optional<Message> opMessage = messageRepository.findById(message_id);
-        if(opMessage.isPresent()){
-            opMessage.get().setMessage_text(message_text);
-            messageRepository.save(opMessage.get());
-            return 1;
-        }
-        return null;
+    public Object updateMessageById(Integer message_id) {
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
-    public Object createMessage(Message message){
-        messageRepository.save(message);
-        return 1;
+    public Object createMessage(){
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 }

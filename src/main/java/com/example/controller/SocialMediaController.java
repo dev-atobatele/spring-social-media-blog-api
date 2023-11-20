@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.entity.Message;
-
+import com.example.service.AccountService;
 import com.example.service.MessageService;
 
 /**
@@ -24,8 +24,12 @@ import com.example.service.MessageService;
 public class SocialMediaController {
     @Autowired
     private MessageService messageService;
+    @Autowired
+    private AccountService accountService;
+    
     public SocialMediaController(MessageService messageService){
         this.messageService = messageService;
+        this.accountService = accountService;
     }    
     @GetMapping("/messages/{message_id}")
     public Message getMessageById(@PathVariable Integer message_id){
@@ -44,7 +48,19 @@ public class SocialMediaController {
         return messageService.getAllMessagesFromUser(account_id);
     }
     @PatchMapping("/messages/{message_id}")
-    public Object updateMessage(@PathVariable Integer message_id, String message_text){
-        return messageService.updateMessageById(message_id, message_text);
+    public Object updateMessage(@PathVariable Integer message_id){
+        return messageService.updateMessageById(message_id);
+    }
+    @PostMapping("/messages")
+    public Object createMessage(){
+        return messageService.createMessage();
+    }
+    @PostMapping("/register")
+    public Object registerAccount(){
+        return accountService.registerAccount();
+    }
+    @PostMapping("/login")
+    public Object login(){
+        return accountService.login();
     }
 }
