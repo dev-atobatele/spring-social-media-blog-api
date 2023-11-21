@@ -10,14 +10,20 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.example.entity.Message;
+import com.example.repository.AccountRepository;
 import com.example.repository.MessageRepository;
 
 @Service
 public class MessageService {
     @Autowired
-    private MessageRepository messageRepository;
-    public MessageService(MessageRepository messageRepository){
+    MessageRepository messageRepository;
+    @Autowired
+    AccountRepository accountRepository;
+    
+
+    public MessageService(MessageRepository messageRepository, AccountRepository accountRepository){
         this.messageRepository = messageRepository;
+        this.accountRepository = accountRepository;
     }
 
     public List<Message> getAllMessages(){
@@ -50,11 +56,23 @@ public class MessageService {
         return postedByUser;
     }
 
-    public Object updateMessageById(Integer message_id) {
-        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    public Object updateMessageById(Integer message_id, Message message) {
+        if(message.getMessage_text().length()>254
+        || message.getMessage_text().isBlank()
+        || messageRepository.existsById(message_id)==false){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        messageRepository.save(message);
+        return 1;
     }
 
-    public Object createMessage(){
-        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    public Object createMessage(Message message){
+        if(message.getMessage_text().length()>254
+        || message.getMessage_text().isBlank()
+        || accountRepository.existsById(message.getPosted_by()) == false){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        messageRepository.save(message);
+        return messageRepository.getById(message.getMessage_id());
     }
 }
