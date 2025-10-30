@@ -64,6 +64,7 @@ public class MessageService {
         || messageRepository.existsById(message_id)==false){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         } else {
+            message.setMessage_id(message_id);
             messageRepository.save(message);
             return 1;
         }
