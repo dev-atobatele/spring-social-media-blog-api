@@ -38,3 +38,17 @@ jobs:
 
       - name: Run Tests
         run: mvn test
+
+      - name: Upload JUnit test results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: junit-results
+          path: target/surefire-reports/
+
+      - name: Upload JaCoCo coverage report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: jacoco-report
+          path: target/site/jacoco/
