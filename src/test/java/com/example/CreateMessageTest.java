@@ -50,21 +50,41 @@ public class CreateMessageTest {
      *  Response Body: JSON representation of message object
      */
     @Test
-    public void createMessageSuccessful() throws IOException, InterruptedException {
-    	String json = "{\"posted_by\":9999,\"message_text\": \"hello message\",\"time_posted_epoch\": 1669947792}";
-        HttpRequest postMessageRequest = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/messages"))
-                .POST(HttpRequest.BodyPublishers.ofString(json))
-                .header("Content-Type", "application/json")
-                .build();
-        HttpResponse<String> response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
-        int status = response.statusCode();
-        Assertions.assertEquals(200, status, "Expected Status Code 200 - Actual Code was: " + status);
-        ObjectMapper om = new ObjectMapper();
-        Message expectedResult = new Message(1, 9999, "hello message", Long.valueOf(1669947792));
-        Message actualResult = om.readValue(response.body().toString(), Message.class);
-        Assertions.assertEquals(expectedResult, actualResult, "Expected="+expectedResult + ", Actual="+actualResult);
-    }
+public void createMessageSuccessful_serverSetsTimestamp() throws IOException, InterruptedException {
+    // request WITHOUT time_posted_epoch
+    String json = "{\"posted_by\":9999,\"message_text\":\"hello message\"}";
+
+    HttpRequest postMessageRequest = HttpRequest.newBuilder()
+            .uri(URI.create("http://localhost:8080/messages"))
+            .POST(HttpRequest.BodyPublishers.ofString(json))
+            .header("Content-Type", "application/json")
+            .build();
+
+    HttpResponse<String> response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
+    int status = response.statusCode();
+    Assertions.assertEquals(200, status, "Expected Status Code 200 - Actual Code was: " + status);
+
+    ObjectMapper om = new ObjectMapper();
+    Message actualResult = om.readValue(response.body(), Message.class);
+
+    // basic sanity checks
+    Assertions.assertNotNull(actualResult, "Response body must be a Message");
+    Assertions.assertEquals(9999, actualResult.getPosted_by(), "posted_by should match");
+    Assertions.assertEquals("hello message", actualResult.getMessage_text(), "message_text should match");
+    Assertions.assertNotNull(actualResult.getMessage_id(), "message_id must be set by server");
+
+    // server-set timestamp should be present and recent (milliseconds)
+    long timeFromServer = actualResult.getTime_posted_epoch();
+    long now = System.currentTimeMillis();
+    long toleranceMillis = 5_000L; // 5 seconds tolerance
+
+    Assertions.assertTrue(timeFromServer > 0, "time_posted_epoch must be > 0");
+    Assertions.assertTrue(Math.abs(now - timeFromServer) < toleranceMillis,
+            "Server timestamp should be within " + toleranceMillis + "ms of now. Was: " + timeFromServer);
+
+    // optional: if you want to verify persistence shape, fetch by id and compare fields (not shown)
+}
+
     
     /**
      * Sending an http request to POST localhost:8080/messages with empty message

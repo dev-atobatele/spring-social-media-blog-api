@@ -48,20 +48,23 @@ public class UpdateMessageTest {
      *  Response Body: 1 (one row modified)
      */
     @Test
-    public void updateMessageSuccessful() throws IOException, InterruptedException {
-    	String json = "{\"message_text\": \"text changed\"}";
-        HttpRequest postMessageRequest = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8080/messages/9999"))
-                .method("PATCH", HttpRequest.BodyPublishers.ofString(json))
-                .header("Content-Type", "application/json")
-                .build();
-        HttpResponse<String> response = webClient.send(postMessageRequest, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response);
-        int status = response.statusCode();
-        Assertions.assertEquals(200, status, "Expected Status Code 200 - Actual Code was: " + status);
-        Integer actualResult = objectMapper.readValue(response.body().toString(), Integer.class);
-        Assertions.assertTrue(actualResult.equals(1), "Expected to modify 1 row, but actually modified " + actualResult + " rows.");
-    }
+public void updateMessageSuccessful() throws IOException, InterruptedException {
+    String json = "{\"message_text\": \"text changed\"}";
+    HttpRequest patchRequest = HttpRequest.newBuilder()
+            .uri(URI.create("http://localhost:8080/messages/9999"))
+            .method("PATCH", HttpRequest.BodyPublishers.ofString(json))
+            .header("Content-Type", "application/json")
+            .build();
+
+    HttpResponse<String> response = webClient.send(patchRequest, HttpResponse.BodyHandlers.ofString());
+    int status = response.statusCode();
+    Assertions.assertEquals(200, status, "Expected Status Code 200 - Actual Code was: " + status);
+
+    // parse integer result
+    Integer actualResult = objectMapper.readValue(response.body(), Integer.class);
+    Assertions.assertEquals(1, actualResult.intValue(), "Expected to modify 1 row, but actually modified " + actualResult + " rows.");
+}
+
 
 
     /**

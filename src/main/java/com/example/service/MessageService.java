@@ -1,6 +1,7 @@
 package com.example.service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,16 +35,18 @@ public class MessageService {
         Optional<Message> optionalMessage = messageRepository.findById(id);
         if(optionalMessage.isPresent()){
             return optionalMessage.get();
+        } else {
+            return null;
         }
-        return null;
     }
 
     public Object deleteMessageById(Integer id){
         if(messageRepository.findById(id).isPresent()){
             messageRepository.deleteById(id);
             return 1;
+        } else {
+            return null;
         }
-        return null;
     }
 
     public List<Message> getAllMessagesFromUser(Integer account_id){
@@ -55,24 +58,30 @@ public class MessageService {
         }
         return postedByUser;
     }
-
+    
     public Object updateMessageById(Integer message_id, Message message) {
         if(message.getMessage_text().length()>254
         || message.getMessage_text().isBlank()
-        || messageRepository.existsById(message_id)==false){
+        || !messageRepository.existsById(message_id)){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } else {
+            message.setMessage_id(message_id);
+            message.setTime_posted_epoch(new Date().getTime());
+            message.setPosted_by(messageRepository.findById(message_id).get().getPosted_by());
+            messageRepository.save(message);
+            return 1;
         }
-        messageRepository.save(message);
-        return 1;
     }
 
     public Object createMessage(Message message){
         if(message.getMessage_text().length()>254
         || message.getMessage_text().isBlank()
-        || accountRepository.existsById(message.getPosted_by()) == false){
+        || !accountRepository.existsById(message.getPosted_by())){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } else {
+            message.setTime_posted_epoch(new Date().getTime());
+            messageRepository.save(message);
+            return messageRepository.getById(message.getMessage_id());
         }
-        messageRepository.save(message);
-        return messageRepository.getById(message.getMessage_id());
     }
 }
