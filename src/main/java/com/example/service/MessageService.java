@@ -81,7 +81,7 @@ public class MessageService {
         } else {
             message.setTime_posted_epoch(new Date().getTime());
             messageRepository.save(message);
-            return messageRepository.getById(message.getMessage_id());
+            return messageRepository.getReferenceById(message.getMessage_id());
         }
     }
 }
