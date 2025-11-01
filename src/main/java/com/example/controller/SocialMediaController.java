@@ -25,9 +25,9 @@ import com.example.service.MessageService;
 @RestController
 public class SocialMediaController {
     @Autowired
-    private MessageService messageService;
+    private final MessageService messageService;
     @Autowired
-    private AccountService accountService;
+    private final AccountService accountService;
     
     public SocialMediaController(MessageService messageService, AccountService accountService){
         this.messageService = messageService;

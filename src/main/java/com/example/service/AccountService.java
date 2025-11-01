@@ -12,7 +12,7 @@ import com.example.repository.AccountRepository;
 @Service
 public class AccountService {
     @Autowired
-    private AccountRepository accountRepository;
+    private final AccountRepository accountRepository;
     public AccountService(AccountRepository accountRepository){
         this.accountRepository = accountRepository;
     }
@@ -28,7 +28,7 @@ public class AccountService {
             }
         }
         accountRepository.save(account);
-        return accountRepository.getById(account.getAccount_id());
+        return accountRepository.getReferenceById(account.getAccount_id());
     }
     public Object login(Account account){
         for (Account account2 : accountRepository.findAll()) {

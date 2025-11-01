@@ -52,11 +52,11 @@ public class RetrieveAllMessagesTest {
         HttpResponse<String> response = webClient.send(request, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
         Assertions.assertEquals(200, status, "Expected Status Code 200 - Actual Code was: " + status);
-        List<Message> expectedResult = new ArrayList<Message>();
+        List<Message> expectedResult = new ArrayList<>();
         expectedResult.add(new Message(9996, 9996, "test message 3", 1669947792L));
         expectedResult.add(new Message(9997, 9997, "test message 2", 1669947792L));
         expectedResult.add(new Message(9999, 9999, "test message 1", 1669947792L));
-        List<Message> actualResult = objectMapper.readValue(response.body().toString(), new TypeReference<List<Message>>(){});
+        List<Message> actualResult = objectMapper.readValue(response.body(), new TypeReference<List<Message>>(){});
         Assertions.assertEquals(expectedResult, actualResult, "Expected="+expectedResult + ", Actual="+actualResult);
     }
 }

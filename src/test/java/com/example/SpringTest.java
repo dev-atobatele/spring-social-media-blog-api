@@ -171,7 +171,7 @@ public class SpringTest {
         HttpResponse<String> response = webClient.send(postRequest, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
         Assertions.assertEquals(404, status);
-        String body = response.body().toString();
+        String body = response.body();
         Assertions.assertTrue(body.contains("timestamp"));
         Assertions.assertTrue(body.contains("status"));
         Assertions.assertTrue(body.contains("error"));

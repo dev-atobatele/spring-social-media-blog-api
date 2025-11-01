@@ -62,7 +62,7 @@ public class UserLoginTest {
         Assertions.assertEquals(200, status);
         ObjectMapper om = new ObjectMapper();
         Account expectedResult = new Account(9999, "testuser1", "password");
-        Account actualResult = om.readValue(response.body().toString(), Account.class);
+        Account actualResult = om.readValue(response.body(), Account.class);
         Assertions.assertEquals(expectedResult, actualResult);        
     }
 

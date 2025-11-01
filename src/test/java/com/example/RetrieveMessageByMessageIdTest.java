@@ -57,7 +57,7 @@ public class RetrieveMessageByMessageIdTest {
         int status = response.statusCode();
         Assertions.assertEquals(200, status, "Expected Status Code 200 - Actual Code was: " + status);
         Message expectedResult = new Message(9999, 9999, "test message 1", 1669947792L);
-        Message actualResult = objectMapper.readValue(response.body().toString(), Message.class);
+        Message actualResult = objectMapper.readValue(response.body(), Message.class);
         Assertions.assertEquals(expectedResult, actualResult, "Expected="+expectedResult + ", Actual="+actualResult);
     }
 
@@ -77,6 +77,6 @@ public class RetrieveMessageByMessageIdTest {
         HttpResponse<String> response = webClient.send(request, HttpResponse.BodyHandlers.ofString());
         int status = response.statusCode();
         Assertions.assertEquals(200, status, "Expected Status Code 200 - Actual Code was: " + status);
-        Assertions.assertTrue(response.body().toString().isEmpty(), "Expected Empty Result, but Result was not Empty");
+        Assertions.assertTrue(response.body().isEmpty(), "Expected Empty Result, but Result was not Empty");
     }
 }
