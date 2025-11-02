@@ -5,7 +5,7 @@ FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
 
 # Copy the built JAR file into the container
-COPY target/spring-social-media-blog-api-*.jar app.jar
+COPY target/Challenges-1.1.jar app.jar
 
 # Expose the port your app runs on
 EXPOSE 8080
