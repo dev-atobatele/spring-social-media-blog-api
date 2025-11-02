@@ -1,0 +1,8 @@
+/home/timat/spring-social-media-blog-api/src/main/java/com/example/entity/Message.java
+/home/timat/spring-social-media-blog-api/src/main/java/com/example/service/AccountService.java
+/home/timat/spring-social-media-blog-api/src/main/java/com/example/SocialMediaApp.java
+/home/timat/spring-social-media-blog-api/src/main/java/com/example/service/MessageService.java
+/home/timat/spring-social-media-blog-api/src/main/java/com/example/controller/SocialMediaController.java
+/home/timat/spring-social-media-blog-api/src/main/java/com/example/repository/AccountRepository.java
+/home/timat/spring-social-media-blog-api/src/main/java/com/example/repository/MessageRepository.java
+/home/timat/spring-social-media-blog-api/src/main/java/com/example/entity/Account.java

@@ -1,0 +1,9 @@
+/home/timat/spring-social-media-blog-api/src/test/java/com/example/CreateMessageTest.java
+/home/timat/spring-social-media-blog-api/src/test/java/com/example/RetrieveMessageByMessageIdTest.java
+/home/timat/spring-social-media-blog-api/src/test/java/com/example/SpringTest.java
+/home/timat/spring-social-media-blog-api/src/test/java/com/example/UpdateMessageTest.java
+/home/timat/spring-social-media-blog-api/src/test/java/com/example/DeleteMessageByMessageIdTest.java
+/home/timat/spring-social-media-blog-api/src/test/java/com/example/RetrieveAllMessagesForUserTest.java
+/home/timat/spring-social-media-blog-api/src/test/java/com/example/RetrieveAllMessagesTest.java
+/home/timat/spring-social-media-blog-api/src/test/java/com/example/UserLoginTest.java
+/home/timat/spring-social-media-blog-api/src/test/java/com/example/UserRegistrationTest.java

@@ -1,0 +1,8 @@
+com/example/service/AccountService.class
+com/example/repository/MessageRepository.class
+com/example/SocialMediaApp.class
+com/example/repository/AccountRepository.class
+com/example/controller/SocialMediaController.class
+com/example/entity/Account.class
+com/example/entity/Message.class
+com/example/service/MessageService.class

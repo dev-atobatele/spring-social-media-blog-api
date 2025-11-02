@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.example.SpringTest" time="1.202" tests="8" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/timat/spring-social-media-blog-api/target/test-classes:/home/timat/spring-social-media-blog-api/target/classes:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.0/spring-boot-starter-data-jpa-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.0/spring-boot-starter-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot/3.5.0/spring-boot-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.0/spring-boot-autoconfigure-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.0/spring-boot-starter-logging-3.5.0.jar:/home/timat/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/home/timat/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/home/timat/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/home/timat/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/timat/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/home/timat/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/timat/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.0/spring-boot-starter-jdbc-3.5.0.jar:/home/timat/.m2/repository/com/zaxxer/HikariCP/6.3.0/HikariCP-6.3.0.jar:/home/timat/.m2/repository/org/springframework/spring-jdbc/6.2.7/spring-jdbc-6.2.7.jar:/home/timat/.m2/repository/org/hibernate/orm/hibernate-core/6.6.15.Final/hibernate-core-6.6.15.Final.jar:/home/timat/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/timat/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/timat/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/home/timat/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/home/timat/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/home/timat/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/home/timat/.m2/repository/net/bytebuddy/byte-buddy/1.17.5/byte-buddy-1.17.5.jar:/home/timat/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/home/timat/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/home/timat/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/home/timat/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/home/timat/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/timat/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/timat/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/home/timat/.m2/repository/org/springframework/data/spring-data-jpa/3.5.0/spring-data-jpa-3.5.0.jar:/home/timat/.m2/repository/org/springframework/data/spring-data-commons/3.5.0/spring-data-commons-3.5.0.jar:/home/timat/.m2/repository/org/springframework/spring-orm/6.2.7/spring-orm-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-context/6.2.7/spring-context-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-aop/6.2.7/spring-aop-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-tx/6.2.7/spring-tx-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-beans/6.2.7/spring-beans-6.2.7.jar:/home/timat/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/timat/.m2/repository/org/springframework/spring-aspects/6.2.7/spring-aspects-6.2.7.jar:/home/timat/.m2/repository/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.0/spring-boot-starter-web-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.0/spring-boot-starter-json-3.5.0.jar:/home/timat/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.0/jackson-databind-2.19.0.jar:/home/timat/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.0/jackson-annotations-2.19.0.jar:/home/timat/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.0/jackson-core-2.19.0.jar:/home/timat/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.0/jackson-datatype-jdk8-2.19.0.jar:/home/timat/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.0/jackson-datatype-jsr310-2.19.0.jar:/home/timat/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.0/jackson-module-parameter-names-2.19.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.0/spring-boot-starter-tomcat-3.5.0.jar:/home/timat/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.41/tomcat-embed-core-10.1.41.jar:/home/timat/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.41/tomcat-embed-el-10.1.41.jar:/home/timat/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.41/tomcat-embed-websocket-10.1.41.jar:/home/timat/.m2/repository/org/springframework/spring-web/6.2.7/spring-web-6.2.7.jar:/home/timat/.m2/repository/io/micrometer/micrometer-observation/1.15.0/micrometer-observation-1.15.0.jar:/home/timat/.m2/repository/io/micrometer/micrometer-commons/1.15.0/micrometer-commons-1.15.0.jar:/home/timat/.m2/repository/org/springframework/spring-webmvc/6.2.7/spring-webmvc-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-expression/6.2.7/spring-expression-6.2.7.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.0/spring-boot-starter-test-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-test/3.5.0/spring-boot-test-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.0/spring-boot-test-autoconfigure-3.5.0.jar:/home/timat/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/timat/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/timat/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/home/timat/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/home/timat/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/home/timat/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/home/timat/.m2/repository/org/assertj/assertj-core/3.27.3/assertj-core-3.27.3.jar:/home/timat/.m2/repository/org/awaitility/awaitility/4.3.0/awaitility-4.3.0.jar:/home/timat/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/timat/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/home/timat/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/home/timat/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/timat/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/home/timat/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/timat/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/home/timat/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/home/timat/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/home/timat/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/home/timat/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.5/byte-buddy-agent-1.17.5.jar:/home/timat/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/timat/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/home/timat/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/timat/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/timat/.m2/repository/org/springframework/spring-core/6.2.7/spring-core-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-jcl/6.2.7/spring-jcl-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-test/6.2.7/spring-test-6.2.7.jar:/home/timat/.m2/repository/org/xmlunit/xmlunit-core/2.10.1/xmlunit-core-2.10.1.jar:/home/timat/.m2/repository/com/h2database/h2/2.3.232/h2-2.3.232.jar:/home/timat/.m2/repository/org/apache/ant/ant/1.10.6/ant-1.10.6.jar:/home/timat/.m2/repository/org/apache/ant/ant-launcher/1.10.6/ant-launcher-1.10.6.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="catalina.useNaming" value="false"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="America/Toronto"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-25-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/timat/spring-social-media-blog-api/target/surefire/surefirebooter-20251102040807006_3.jar /home/timat/spring-social-media-blog-api/target/surefire 2025-11-02T04-08-06_929-jvmRun1 surefire-20251102040807006_1tmp surefire_0-20251102040807006_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/timat/spring-social-media-blog-api/target/test-classes:/home/timat/spring-social-media-blog-api/target/classes:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.0/spring-boot-starter-data-jpa-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.0/spring-boot-starter-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot/3.5.0/spring-boot-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.0/spring-boot-autoconfigure-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.0/spring-boot-starter-logging-3.5.0.jar:/home/timat/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/home/timat/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/home/timat/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/home/timat/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/home/timat/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/home/timat/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/timat/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.0/spring-boot-starter-jdbc-3.5.0.jar:/home/timat/.m2/repository/com/zaxxer/HikariCP/6.3.0/HikariCP-6.3.0.jar:/home/timat/.m2/repository/org/springframework/spring-jdbc/6.2.7/spring-jdbc-6.2.7.jar:/home/timat/.m2/repository/org/hibernate/orm/hibernate-core/6.6.15.Final/hibernate-core-6.6.15.Final.jar:/home/timat/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/timat/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/timat/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/home/timat/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/home/timat/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/home/timat/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/home/timat/.m2/repository/net/bytebuddy/byte-buddy/1.17.5/byte-buddy-1.17.5.jar:/home/timat/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/home/timat/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/home/timat/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/home/timat/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/home/timat/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/timat/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/timat/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/home/timat/.m2/repository/org/springframework/data/spring-data-jpa/3.5.0/spring-data-jpa-3.5.0.jar:/home/timat/.m2/repository/org/springframework/data/spring-data-commons/3.5.0/spring-data-commons-3.5.0.jar:/home/timat/.m2/repository/org/springframework/spring-orm/6.2.7/spring-orm-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-context/6.2.7/spring-context-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-aop/6.2.7/spring-aop-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-tx/6.2.7/spring-tx-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-beans/6.2.7/spring-beans-6.2.7.jar:/home/timat/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/timat/.m2/repository/org/springframework/spring-aspects/6.2.7/spring-aspects-6.2.7.jar:/home/timat/.m2/repository/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.0/spring-boot-starter-web-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.0/spring-boot-starter-json-3.5.0.jar:/home/timat/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.0/jackson-databind-2.19.0.jar:/home/timat/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.0/jackson-annotations-2.19.0.jar:/home/timat/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.0/jackson-core-2.19.0.jar:/home/timat/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.0/jackson-datatype-jdk8-2.19.0.jar:/home/timat/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.0/jackson-datatype-jsr310-2.19.0.jar:/home/timat/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.0/jackson-module-parameter-names-2.19.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.0/spring-boot-starter-tomcat-3.5.0.jar:/home/timat/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.41/tomcat-embed-core-10.1.41.jar:/home/timat/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.41/tomcat-embed-el-10.1.41.jar:/home/timat/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.41/tomcat-embed-websocket-10.1.41.jar:/home/timat/.m2/repository/org/springframework/spring-web/6.2.7/spring-web-6.2.7.jar:/home/timat/.m2/repository/io/micrometer/micrometer-observation/1.15.0/micrometer-observation-1.15.0.jar:/home/timat/.m2/repository/io/micrometer/micrometer-commons/1.15.0/micrometer-commons-1.15.0.jar:/home/timat/.m2/repository/org/springframework/spring-webmvc/6.2.7/spring-webmvc-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-expression/6.2.7/spring-expression-6.2.7.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.0/spring-boot-starter-test-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-test/3.5.0/spring-boot-test-3.5.0.jar:/home/timat/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.0/spring-boot-test-autoconfigure-3.5.0.jar:/home/timat/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/timat/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/timat/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/home/timat/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/home/timat/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/home/timat/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/home/timat/.m2/repository/org/assertj/assertj-core/3.27.3/assertj-core-3.27.3.jar:/home/timat/.m2/repository/org/awaitility/awaitility/4.3.0/awaitility-4.3.0.jar:/home/timat/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/timat/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/home/timat/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/home/timat/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/timat/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/home/timat/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/timat/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/home/timat/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/home/timat/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/home/timat/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/home/timat/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.5/byte-buddy-agent-1.17.5.jar:/home/timat/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/timat/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/home/timat/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/timat/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/timat/.m2/repository/org/springframework/spring-core/6.2.7/spring-core-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-jcl/6.2.7/spring-jcl-6.2.7.jar:/home/timat/.m2/repository/org/springframework/spring-test/6.2.7/spring-test-6.2.7.jar:/home/timat/.m2/repository/org/xmlunit/xmlunit-core/2.10.1/xmlunit-core-2.10.1.jar:/home/timat/.m2/repository/com/h2database/h2/2.3.232/h2-2.3.232.jar:/home/timat/.m2/repository/org/apache/ant/ant/1.10.6/ant-1.10.6.jar:/home/timat/.m2/repository/org/apache/ant/ant-launcher/1.10.6/ant-launcher-1.10.6.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/timat"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-09-16"/>
+    <property name="java.home" value="/usr/lib/jvm/java-25-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/timat/spring-social-media-blog-api"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/home/timat/spring-social-media-blog-api/target/surefire/surefirebooter-20251102040807006_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25+36-Ubuntu-124.04.2"/>
+    <property name="user.name" value="timat"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.6.87.2-microsoft-standard-WSL2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/timat/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-25"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="catalina.home" value="/tmp/tomcat.8080.12044130617608365407"/>
+    <property name="com.zaxxer.hikari.pool_number" value="26"/>
+    <property name="java.version" value="25"/>
+    <property name="user.dir" value="/home/timat/spring-social-media-blog-api"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="4319"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="catalina.base" value="/tmp/tomcat.8080.8864134023809860862"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="25+36-Ubuntu-124.04.2"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="getSocialMediaControllerBean" classname="com.example.SpringTest" time="0.144">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2025-11-02T04:08:34.121-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v3.5.3 using Java 25 with PID 4319 (started by timat in /home/timat/spring-social-media-blog-api)
+2025-11-02T04:08:34.121-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T04:08:34.151-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T04:08:34.153-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 2 JPA repository interfaces.
+2025-11-02T04:08:34.167-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-02T04:08:34.167-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-02T04:08:34.167-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-11-02T04:08:34.173-05:00  INFO 4319 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-02T04:08:34.173-05:00  INFO 4319 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 52 ms
+2025-11-02T04:08:34.183-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
+2025-11-02T04:08:34.184-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-19 - Added connection conn180: url=jdbc:h2:mem:testdb user=SA
+2025-11-02T04:08:34.184-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
+2025-11-02T04:08:34.184-05:00  INFO 4319 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T04:08:34.185-05:00  INFO 4319 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T04:08:34.187-05:00  INFO 4319 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T04:08:34.188-05:00  WARN 4319 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-02T04:08:34.188-05:00  INFO 4319 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-19)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T04:08:34.198-05:00  INFO 4319 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T04:08:34.199-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:34.221-05:00  WARN 4319 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-02T04:08:34.223-05:00  INFO 4319 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-02T04:08:34.240-05:00  INFO 4319 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-11-02T04:08:34.250-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-02T04:08:34.251-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 0.138 seconds (process running for 26.035)
+2025-11-02T04:08:34.252-05:00  INFO 4319 --- [           main] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-02T04:08:34.253-05:00  INFO 4319 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-02T04:08:34.254-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:34.254-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
+2025-11-02T04:08:34.255-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
+]]></system-out>
+  </testcase>
+  <testcase name="getMessageServiceBean" classname="com.example.SpringTest" time="0.136">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2025-11-02T04:08:34.263-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v3.5.3 using Java 25 with PID 4319 (started by timat in /home/timat/spring-social-media-blog-api)
+2025-11-02T04:08:34.264-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T04:08:34.298-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T04:08:34.301-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2025-11-02T04:08:34.317-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-02T04:08:34.317-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-02T04:08:34.318-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-11-02T04:08:34.323-05:00  INFO 4319 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-02T04:08:34.323-05:00  INFO 4319 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 59 ms
+2025-11-02T04:08:34.331-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
+2025-11-02T04:08:34.332-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-20 - Added connection conn181: url=jdbc:h2:mem:testdb user=SA
+2025-11-02T04:08:34.332-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
+2025-11-02T04:08:34.333-05:00  INFO 4319 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T04:08:34.333-05:00  INFO 4319 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T04:08:34.337-05:00  INFO 4319 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T04:08:34.337-05:00  WARN 4319 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-02T04:08:34.337-05:00  INFO 4319 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-20)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T04:08:34.350-05:00  INFO 4319 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T04:08:34.350-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:34.364-05:00  WARN 4319 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-02T04:08:34.365-05:00  INFO 4319 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-02T04:08:34.378-05:00  INFO 4319 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-11-02T04:08:34.387-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-02T04:08:34.388-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 0.131 seconds (process running for 26.172)
+2025-11-02T04:08:34.388-05:00  INFO 4319 --- [           main] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-02T04:08:34.389-05:00  INFO 4319 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-02T04:08:34.390-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:34.391-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
+2025-11-02T04:08:34.391-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.
+]]></system-out>
+  </testcase>
+  <testcase name="getMessageRepositoryBean" classname="com.example.SpringTest" time="0.138">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2025-11-02T04:08:34.398-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v3.5.3 using Java 25 with PID 4319 (started by timat in /home/timat/spring-social-media-blog-api)
+2025-11-02T04:08:34.398-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T04:08:34.437-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T04:08:34.440-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2025-11-02T04:08:34.460-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-02T04:08:34.461-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-02T04:08:34.461-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-11-02T04:08:34.467-05:00  INFO 4319 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-02T04:08:34.467-05:00  INFO 4319 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 68 ms
+2025-11-02T04:08:34.474-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Starting...
+2025-11-02T04:08:34.476-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-21 - Added connection conn182: url=jdbc:h2:mem:testdb user=SA
+2025-11-02T04:08:34.476-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Start completed.
+2025-11-02T04:08:34.476-05:00  INFO 4319 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T04:08:34.477-05:00  INFO 4319 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T04:08:34.479-05:00  INFO 4319 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T04:08:34.479-05:00  WARN 4319 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-02T04:08:34.479-05:00  INFO 4319 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-21)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T04:08:34.492-05:00  INFO 4319 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T04:08:34.493-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:34.500-05:00  WARN 4319 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-02T04:08:34.502-05:00  INFO 4319 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-02T04:08:34.519-05:00  INFO 4319 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-11-02T04:08:34.527-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-02T04:08:34.528-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 0.135 seconds (process running for 26.312)
+2025-11-02T04:08:34.528-05:00  INFO 4319 --- [           main] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-02T04:08:34.529-05:00  INFO 4319 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-02T04:08:34.529-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:34.530-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown initiated...
+2025-11-02T04:08:34.530-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown completed.
+]]></system-out>
+  </testcase>
+  <testcase name="accountRepositoryIsRepositoryTest" classname="com.example.SpringTest" time="0.182">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2025-11-02T04:08:34.538-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v3.5.3 using Java 25 with PID 4319 (started by timat in /home/timat/spring-social-media-blog-api)
+2025-11-02T04:08:34.538-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T04:08:34.579-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T04:08:34.581-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 2 JPA repository interfaces.
+2025-11-02T04:08:34.599-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-02T04:08:34.599-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-02T04:08:34.599-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-11-02T04:08:34.606-05:00  INFO 4319 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-02T04:08:34.606-05:00  INFO 4319 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 68 ms
+2025-11-02T04:08:34.615-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Starting...
+2025-11-02T04:08:34.616-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-22 - Added connection conn183: url=jdbc:h2:mem:testdb user=SA
+2025-11-02T04:08:34.616-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Start completed.
+2025-11-02T04:08:34.617-05:00  INFO 4319 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T04:08:34.617-05:00  INFO 4319 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T04:08:34.621-05:00  INFO 4319 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T04:08:34.621-05:00  WARN 4319 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-02T04:08:34.621-05:00  INFO 4319 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-22)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T04:08:34.634-05:00  INFO 4319 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T04:08:34.635-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:34.650-05:00  WARN 4319 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-02T04:08:34.652-05:00  INFO 4319 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-02T04:08:34.688-05:00  INFO 4319 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-11-02T04:08:34.701-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-02T04:08:34.701-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 0.169 seconds (process running for 26.486)
+equals
+toString
+hashCode
+indexOf
+indexOf
+flush
+count
+count
+save
+isFrozen
+delete
+exists
+findAll
+findAll
+findAll
+findAll
+findAll
+findAll
+findAll
+findAll
+findAll
+findAll
+saveAndFlush
+saveAllAndFlush
+deleteInBatch
+deleteAllInBatch
+deleteAllInBatch
+deleteAllByIdInBatch
+getOne
+getById
+getReferenceById
+deleteById
+deleteAllById
+deleteAll
+deleteAll
+findAllById
+findAllById
+findOne
+findBy
+saveAll
+saveAll
+findById
+existsById
+getTargetClass
+getDecoratedClass
+setTargetSource
+setExposeProxy
+isExposeProxy
+setPreFiltered
+isPreFiltered
+removeAdvisor
+removeAdvisor
+replaceAdvisor
+addAdvice
+addAdvice
+removeAdvice
+toProxyConfigString
+getTargetSource
+getProxiedInterfaces
+isInterfaceProxied
+getAdvisorCount
+getAdvisors
+addAdvisor
+addAdvisor
+isProxyTargetClass
+isProxyClass
+newProxyInstance
+getInvocationHandler
+getProxyClass
+getClass
+notify
+notifyAll
+wait
+wait
+wait
+[Account{account_id=9996, username='testuser4', password='password'}, Account{account_id=9997, username='testuser3', password='password'}, Account{account_id=9998, username='testuser2', password='password'}, Account{account_id=9999, username='testuser1', password='password'}]
+2025-11-02T04:08:34.710-05:00  INFO 4319 --- [           main] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-02T04:08:34.711-05:00  INFO 4319 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-02T04:08:34.711-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:34.712-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown initiated...
+2025-11-02T04:08:34.712-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown completed.
+]]></system-out>
+  </testcase>
+  <testcase name="getAccountServiceBean" classname="com.example.SpringTest" time="0.14">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2025-11-02T04:08:34.722-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v3.5.3 using Java 25 with PID 4319 (started by timat in /home/timat/spring-social-media-blog-api)
+2025-11-02T04:08:34.722-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T04:08:34.760-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T04:08:34.763-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2025-11-02T04:08:34.778-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-02T04:08:34.778-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-02T04:08:34.778-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-11-02T04:08:34.783-05:00  INFO 4319 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-02T04:08:34.783-05:00  INFO 4319 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 60 ms
+2025-11-02T04:08:34.792-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Starting...
+2025-11-02T04:08:34.793-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Added connection conn184: url=jdbc:h2:mem:testdb user=SA
+2025-11-02T04:08:34.793-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Start completed.
+2025-11-02T04:08:34.793-05:00  INFO 4319 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T04:08:34.794-05:00  INFO 4319 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T04:08:34.796-05:00  INFO 4319 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T04:08:34.796-05:00  WARN 4319 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-02T04:08:34.797-05:00  INFO 4319 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-23)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T04:08:34.808-05:00  INFO 4319 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T04:08:34.809-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:34.819-05:00  WARN 4319 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-02T04:08:34.822-05:00  INFO 4319 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-02T04:08:34.839-05:00  INFO 4319 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-11-02T04:08:34.848-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-02T04:08:34.849-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 0.134 seconds (process running for 26.633)
+2025-11-02T04:08:34.849-05:00  INFO 4319 --- [           main] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-02T04:08:34.850-05:00  INFO 4319 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-02T04:08:34.851-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:34.853-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown initiated...
+2025-11-02T04:08:34.853-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown completed.
+]]></system-out>
+  </testcase>
+  <testcase name="messageRepositoryIsRepositoryTest" classname="com.example.SpringTest" time="0.138">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2025-11-02T04:08:34.861-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v3.5.3 using Java 25 with PID 4319 (started by timat in /home/timat/spring-social-media-blog-api)
+2025-11-02T04:08:34.861-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T04:08:34.890-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T04:08:34.894-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2025-11-02T04:08:34.909-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-02T04:08:34.910-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-02T04:08:34.910-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-11-02T04:08:34.918-05:00  INFO 4319 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-02T04:08:34.918-05:00  INFO 4319 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 57 ms
+2025-11-02T04:08:34.927-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Starting...
+2025-11-02T04:08:34.928-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-24 - Added connection conn185: url=jdbc:h2:mem:testdb user=SA
+2025-11-02T04:08:34.928-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Start completed.
+2025-11-02T04:08:34.929-05:00  INFO 4319 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T04:08:34.929-05:00  INFO 4319 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T04:08:34.931-05:00  INFO 4319 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T04:08:34.932-05:00  WARN 4319 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-02T04:08:34.932-05:00  INFO 4319 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-24)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T04:08:34.943-05:00  INFO 4319 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T04:08:34.945-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:34.954-05:00  WARN 4319 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-02T04:08:34.956-05:00  INFO 4319 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-02T04:08:34.973-05:00  INFO 4319 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-11-02T04:08:34.983-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-02T04:08:34.985-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 0.129 seconds (process running for 26.769)
+equals
+toString
+hashCode
+indexOf
+indexOf
+flush
+count
+count
+save
+isFrozen
+delete
+exists
+findAll
+findAll
+findAll
+findAll
+findAll
+findAll
+findAll
+findAll
+findAll
+findAll
+saveAndFlush
+saveAllAndFlush
+deleteInBatch
+deleteAllInBatch
+deleteAllInBatch
+deleteAllByIdInBatch
+getOne
+getById
+getReferenceById
+deleteById
+deleteAllById
+deleteAll
+deleteAll
+findAllById
+findAllById
+findOne
+findBy
+saveAll
+saveAll
+findById
+existsById
+getTargetClass
+getDecoratedClass
+setTargetSource
+setExposeProxy
+isExposeProxy
+setPreFiltered
+isPreFiltered
+removeAdvisor
+removeAdvisor
+replaceAdvisor
+addAdvice
+addAdvice
+removeAdvice
+toProxyConfigString
+getTargetSource
+getProxiedInterfaces
+isInterfaceProxied
+getAdvisorCount
+getAdvisors
+addAdvisor
+addAdvisor
+isProxyTargetClass
+isProxyClass
+newProxyInstance
+getInvocationHandler
+getProxyClass
+getClass
+notify
+notifyAll
+wait
+wait
+wait
+[Message{message_id=9996, posted_by=9996, message_text='test message 3', time_posted_epoch=1669947792}, Message{message_id=9997, posted_by=9997, message_text='test message 2', time_posted_epoch=1669947792}, Message{message_id=9999, posted_by=9999, message_text='test message 1', time_posted_epoch=1669947792}]
+2025-11-02T04:08:34.990-05:00  INFO 4319 --- [           main] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-02T04:08:34.991-05:00  INFO 4319 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-02T04:08:34.991-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:34.992-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown initiated...
+2025-11-02T04:08:34.992-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown completed.
+]]></system-out>
+  </testcase>
+  <testcase name="default404Test" classname="com.example.SpringTest" time="0.151">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2025-11-02T04:08:35.000-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v3.5.3 using Java 25 with PID 4319 (started by timat in /home/timat/spring-social-media-blog-api)
+2025-11-02T04:08:35.000-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T04:08:35.037-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T04:08:35.039-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 2 JPA repository interfaces.
+2025-11-02T04:08:35.054-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-02T04:08:35.055-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-02T04:08:35.055-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-11-02T04:08:35.061-05:00  INFO 4319 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-02T04:08:35.062-05:00  INFO 4319 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 61 ms
+2025-11-02T04:08:35.071-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Starting...
+2025-11-02T04:08:35.072-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-25 - Added connection conn186: url=jdbc:h2:mem:testdb user=SA
+2025-11-02T04:08:35.072-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Start completed.
+2025-11-02T04:08:35.072-05:00  INFO 4319 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T04:08:35.072-05:00  INFO 4319 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T04:08:35.076-05:00  INFO 4319 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T04:08:35.077-05:00  WARN 4319 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-02T04:08:35.077-05:00  INFO 4319 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-25)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T04:08:35.087-05:00  INFO 4319 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T04:08:35.087-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:35.100-05:00  WARN 4319 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-02T04:08:35.101-05:00  INFO 4319 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-02T04:08:35.119-05:00  INFO 4319 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-11-02T04:08:35.130-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-02T04:08:35.131-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 0.137 seconds (process running for 26.915)
+2025-11-02T04:08:35.134-05:00  INFO 4319 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-02T04:08:35.134-05:00  INFO 4319 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-02T04:08:35.134-05:00  INFO 4319 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-11-02T04:08:35.141-05:00  INFO 4319 --- [           main] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-02T04:08:35.142-05:00  INFO 4319 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-02T04:08:35.143-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:35.144-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown initiated...
+2025-11-02T04:08:35.144-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown completed.
+]]></system-out>
+  </testcase>
+  <testcase name="getAccountRepositoryBean" classname="com.example.SpringTest" time="0.169">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2025-11-02T04:08:35.151-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v3.5.3 using Java 25 with PID 4319 (started by timat in /home/timat/spring-social-media-blog-api)
+2025-11-02T04:08:35.151-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to 1 default profile: "default"
+2025-11-02T04:08:35.190-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02T04:08:35.195-05:00  INFO 4319 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2025-11-02T04:08:35.222-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-02T04:08:35.222-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-02T04:08:35.223-05:00  INFO 4319 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-11-02T04:08:35.230-05:00  INFO 4319 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-02T04:08:35.230-05:00  INFO 4319 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 79 ms
+2025-11-02T04:08:35.241-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Starting...
+2025-11-02T04:08:35.242-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-26 - Added connection conn187: url=jdbc:h2:mem:testdb user=SA
+2025-11-02T04:08:35.242-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Start completed.
+2025-11-02T04:08:35.242-05:00  INFO 4319 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02T04:08:35.244-05:00  INFO 4319 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-02T04:08:35.251-05:00  INFO 4319 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-02T04:08:35.251-05:00  WARN 4319 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-02T04:08:35.251-05:00  INFO 4319 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-26)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-02T04:08:35.269-05:00  INFO 4319 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-02T04:08:35.270-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:35.282-05:00  WARN 4319 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-02T04:08:35.283-05:00  INFO 4319 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-11-02T04:08:35.299-05:00  INFO 4319 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-11-02T04:08:35.308-05:00  INFO 4319 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-02T04:08:35.309-05:00  INFO 4319 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 0.163 seconds (process running for 27.093)
+2025-11-02T04:08:35.310-05:00  INFO 4319 --- [           main] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-02T04:08:35.311-05:00  INFO 4319 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-02T04:08:35.312-05:00  INFO 4319 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02T04:08:35.312-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Shutdown initiated...
+2025-11-02T04:08:35.313-05:00  INFO 4319 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Shutdown completed.
+]]></system-out>
+  </testcase>
+</testsuite>
